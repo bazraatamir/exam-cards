@@ -3,6 +3,9 @@ const express = require("express");
 const memberRoutes = require("./routes/MemberRoutes");
 const bookRoutes = require("./routes/BookRoutes");
 const loanRoutes = require("./routes/loanRoutes");
+const authorRoutes = require("./routes/authorRoutes");
+const memberController = require("./controllers/memberController");
+const loanController = require("./controllers/loanController");
 const authorRoutes = require("./routes/AuthorRoutes");
 
 const errorHandler = require("./middleware/errorHandler");
@@ -32,6 +35,9 @@ app.use("/api/members", ensureRouter("members", memberRoutes));
 app.use("/api/books", ensureRouter("books", bookRoutes));
 app.use("/api/loans", ensureRouter("loans", loanRoutes));
 app.use("/api/authors", ensureRouter("authors", authorRoutes));
+app.use("/api/members", memberRoutes);
+app.use("/api/loans", loanRoutes);
+
 
 app.use((req, res) => {
   res.status(404).json({
