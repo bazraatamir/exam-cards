@@ -1,9 +1,9 @@
 const express = require("express");
 
-const memberRoutes = require("./routes/memberRoutes");
-const bookRoutes = require("./routes/bookRoutes");
+const memberRoutes = require("./routes/MemberRoutes");
+const bookRoutes = require("./routes/BookRoutes");
 const loanRoutes = require("./routes/loanRoutes");
-const authorRoutes = require("./routes/authorRoutes");
+const authorRoutes = require("./routes/AuthorRoutes");
 
 const errorHandler = require("./middleware/errorHandler");
 
@@ -44,3 +44,7 @@ app.use(errorHandler);
 app.listen(3000, () => {
   console.log("server ajillaj bn");
 });
+
+
+
+

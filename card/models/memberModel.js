@@ -7,6 +7,7 @@ const MemberModel = {
   },
 
   async getById(id) {
+    
     const [rows] = await db.query('SELECT * FROM `Гишүүн` WHERE id = ?', [id]);
     return rows[0] || null;
   },
@@ -27,3 +28,5 @@ const MemberModel = {
 };
 
 module.exports = MemberModel;
+
+
