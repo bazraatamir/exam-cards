@@ -7,9 +7,3 @@ const errorHandler = (err, req, res, next) => {
 
 module.exports = errorHandler;
 
-// User username/password оруулна.
-// Client server рүү явуулна.
-// Server database-с user хайна.
-// Password-ийг hash-тай харьцуулж шалгана. token өгнө
-// Хэрвээ database алдагдвал бүх хүний password ил болно.
-// Тиймээс: hash хийж хадгалдаг bcrypt зэрэг ашигладаг
